@@ -11,7 +11,7 @@ export const ImageGalleryItem = ({ largeImageURL, setCurrentImage }) => {
     <GalleryItemStyled>
       <GalleryItemImageStyled
         src={largeImageURL}
-        alt='photo'
+        alt='text'
         onClick={() => setCurrentImage(largeImageURL)}
       />
     </GalleryItemStyled>
