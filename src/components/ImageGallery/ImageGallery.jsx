@@ -12,7 +12,7 @@ export const ImageGallery = ({ images = [], setCurrentImage }) => {
           key={image.id}
           webformatURL={image.webformatURL}
           largeImageURL={image.largeImageURL}
-          tags={image.tags}
+          tags='text'
           setCurrentImage={setCurrentImage}
         />
       ))}

@@ -6,12 +6,12 @@ import {
   GalleryItemImageStyled,
 } from './ImageGalleryItem.styled';
 
-export const ImageGalleryItem = ({ largeImageURL, tags, setCurrentImage }) => {
+export const ImageGalleryItem = ({ largeImageURL, setCurrentImage }) => {
   return (
     <GalleryItemStyled>
       <GalleryItemImageStyled
         src={largeImageURL}
-        alt={tags}
+        alt='text'
         onClick={() => setCurrentImage(largeImageURL)}
       />
     </GalleryItemStyled>
