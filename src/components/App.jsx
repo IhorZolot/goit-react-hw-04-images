@@ -12,12 +12,12 @@ export const App = () => {
   const [hits, setHits] = useState([]);
   const [q, setQ] = useState('');
   const [page, setPage] = useState(1);
-  const [per_page, setPer_page] = useState(12);
+  const [per_page] = useState(12);
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState('');
   const [totalHits, setTotalHits] = useState(0);
-  const [error, setError] = useState('');
+  const [ setError] = useState('');
 
   useEffect(() => {
     fetchImages();
@@ -42,8 +42,6 @@ export const App = () => {
   const handleSetSearch = newQ => {
     setQ(newQ);
     setPage(1);
-    setHits([]); 
-  setTotalHits(0);
   };
 
   const toggleModal = () => {
