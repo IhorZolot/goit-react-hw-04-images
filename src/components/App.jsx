@@ -20,21 +20,20 @@ export const App = () => {
   const [ setError] = useState('');
 
   useEffect(() => {
-    fetchImages();
-  }, [q, page]);
-
-  const fetchImages = async () => {
-    try {
-      setLoading(true);
-      const { hits, totalHits } = await fetchImg({ per_page, q, page });
-      setHits(prevHits => [...prevHits, ...hits]);
-      setTotalHits(totalHits);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setLoading(false);
-    }
-  };
+    const fetchImages = async () => {
+      try {
+        setLoading(true);
+        const { hits, totalHits } = await fetchImg({ per_page, q, page });
+        setHits(prevHits => [...prevHits, ...hits]);
+        setTotalHits(totalHits);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchImages(); 
+  }, [q, page, per_page, setError]); 
 
   const loadNextImage = () => {
     setPage(prevPage => prevPage + 1);
