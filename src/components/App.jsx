@@ -41,6 +41,8 @@ export const App = () => {
   const handleSetSearch = newQ => {
     setQ(newQ);
     setPage(1);
+    setHits([]); 
+  setTotalHits(0);
   };
 
   const toggleModal = () => {
