@@ -41,7 +41,7 @@ export const App = () => {
   const handleSetSearch = newQ => {
     setQ(newQ);
     setPage(1);
-    setHits([]); 
+    setHits([]);  
   setTotalHits(0);
   };
 
